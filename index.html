@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stoic Quotes Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Anime Meme Generator</h1>
+    <!--Solution so the user doesn't have to input the API token every time-->
+    <!-- 
+    <div class="input-group">
+      <label for="api-token">API Token:</label>
+      <input type="text" id="api-token" placeholder="Enter your API token" />
+    </div>
+    -->
+    <input type="hidden" id="api-token" value="NTUzNDU1MzI5NDA1NDM1OTI5.MTc2MDY0Nzc3MQ--.d68fbc6873a2" />
+    <div class="input-group">
+      <label for="endpoint">Meme Type:</label>
+      <select id="endpoint">
+        <option value="angry">angry</option>
+        <option value="baka">baka</option>
+        <option value="blush">blush</option>
+        <option value="bonk">bonk</option>
+        <option value="bored">bored</option>
+        <option value="bully">bully</option>
+        <option value="bite">bite</option>
+        <option value="cry">cry</option>
+        <!-- Add more endpoints as needed -->
+      </select>
+    </div>
+    <button id="fetch-btn">Generate Meme!</button>
+    <div class="quote-box">
+      <div class="image-center-container">
+        <img id="api-image" src="" alt="API result image" style="display:none;max-width:100%;border-radius:12px;margin:1rem 0;" />
+      </div>
+      <p id="api-message"></p>
+  <pre id="api-response" style="background:rgba(49, 1, 82, 0.6);padding:1rem 2rem;border-radius:24px;overflow-x:auto;width:calc(100vw - 1px);max-width:1800px;position:fixed;left:50%;bottom:32px;transform:translateX(-50%);font-size:1.2rem;white-space:nowrap;z-index:100;">No data yet.</pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
